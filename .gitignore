@@ -1,0 +1,14 @@
+# 민감/대용량 원본 자료 — git 제외
+# (referernce/ : 국정원·NSR·내부 기획안·해외 사례 원본 PDF 등)
+referernce/
+
+# 백업/압축본
+*.zip
+
+# Claude Code 개인 로컬 설정 (팀과 공유 안 함)
+.claude/settings.local.json
+
+# OS/편집기 잡파일
+Thumbs.db
+desktop.ini
+.DS_Store

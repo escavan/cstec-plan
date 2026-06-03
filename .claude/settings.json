@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe",
+            "args": [
+              "-NoProfile",
+              "-NonInteractive",
+              "-Command",
+              "[Console]::OutputEncoding=[System.Text.Encoding]::UTF8; $c='[cstec-plan 이어서 작업] 사용자 메시지 처리 전에 이번 응답 맨 위에 굵은 볼드체로 배너를 먼저 출력하라. 제목: cstec-plan 작업 이어가기. (1) 현재 상태 = 산출물 01~04 완료. (2) 확정 = 2분야 x 직무군 x 레벨, 난이도 띠 하향(중급=표준실무, 고급=심화실무, 연구개발급=범위초과). (3) 미확정 = 초동대응 통합/사고조사 트랙 배치/레벨 시수 표준/직무군 코드명/신규과목 우선순위/비전 문구. (4) 다음 할 일 = [1] 04 신규과목 목록에서 관련성 없는 과목 제외·선별, [2] 기존 운영 중 교육과정(현행 2026년 22개) 개선·고도화. (이후 로드맵/실라버스) 마지막 줄에 이어서 진행할까요 라고 물어라. 자세한 맥락은 자동 로드된 메모리 cstec-plan-project.md 참고.'; @{hookSpecificOutput=@{hookEventName='SessionStart';additionalContext=$c}} | ConvertTo-Json -Compress"
+            ],
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
